@@ -1,5 +1,7 @@
 def call(Map scmConfig) {
-    // Custom logic for checkout
-    echo "Custom checkout logic"
+    if (!scmConfig) {
+        error "SCM configuration is required for checkout"
+    }
+    // Use Jenkins' built-in checkout step
     checkout scmConfig
 }
