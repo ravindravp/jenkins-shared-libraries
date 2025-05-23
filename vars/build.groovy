@@ -1,3 +1,4 @@
 def call() {
-    echo "Building app..."
+    echo "Building the application using Maven..."
+    sh 'mvn clean install'
 }
